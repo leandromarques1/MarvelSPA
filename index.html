@@ -25,113 +25,83 @@
 
 	<title>Marvel - Single Page Aplication</title>
 
-	<style type="text/css">
-		body
-		{
-			/*background-image: url('https://i.ibb.co/tPXGqT4/398ri15x5da31.jpg');*/ 
-			background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTroN-WxaD47WXVKmQVvPCLfijHhm45oC_bgw&usqp=CAU');
-			width: 100%; 
-		}
-		.marvelTeam
-		{
-			width: 100%;
-			height: 100%;
-			/*margin: 20px;*/
-			color: black;
-			border-style: solid;
-			/*border-radius: 16px;*/
-			text-align: center; 
-		}
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap" rel="stylesheet"> 
+	
+	<link rel="stylesheet" type="text/css" href="style.css">
 
-		img
-		{
-			/*width: 250px;*/
-			width: 100%;
-			height: 75%;
-			display: block; 
-			margin-left: auto;
-			margin-right: auto;
-		}
 
-		.personagem
-		{
-			border-style: solid; 
-			background:
-		}
-
-		.personagemAvenger
-		{
-			/*width: 300px;*/
-		}
-	</style>
 </head>
-<!-- <body style="background: #909090;"> -->
+
 <body >
 	<header style="background: #202020;">
-		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Marvel_Logo.svg/2560px-Marvel_Logo.svg.png" style="width: 20%; height: 100%;">
+		<img src="img/Marvel_Logo.png" style="width: 10%; height: %;">
 	</header>
 	
-	<div class="container" style="background: white; text-align: center;">
-		<h1 style="background: gold; padding: 50px;">
-			Aqui vem o MARVEL - SPA
+	<!-- Central Page -->
+	<div class="container" style="background: #EEEEEE; text-align: center;">
+		<h1 style="background: ; padding: 50px;">
+			<b>MARVEL - SPA</b>
 		</h1>
 
+		<!-- Marvel's Teams -->
 		<div class="row" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
-			<div class="col-md-4 col-sm-12" style="background: red; ">
+			<div class="col-md-4 col-sm-4">
 				<a href="#" onclick="goXMEN(this)">
-					<div id="xmen" class="marvelTeam" style="background: ;">
+					<div id="xmen" class="marvelTeam">
 						<img id="imgXMEN" src="">
-						<h3 id="nameXMEN"></h3>
+						<h2 id="nameXMEN"></h2>
 					</div>
 				</a>
 			</div>
 
-			<div class="col-md-4 col-sm-12" style="background: green;">
+			<div class="col-md-4 col-sm-4">
 				<a href="#" onclick="goAvengers(this)">
-					<div id="avengers" class="marvelTeam" style="background: ;">
+					<div id="avengers" class="marvelTeam">
 						<img id="imgAvengers" src="">
-						<h3 id="nameAvengers"></h3>
+						<h2 id="nameAvengers"></h2>
 					</div>
 				</a>
 			</div>
 
-			<div class="col-md-4 col-sm-12" style="background: blue;">
+			<div class="col-md-4 col-sm-4">
 				<a href="#" onclick="goGuardians(this)">
-					<div id="guardians" class="marvelTeam" style="background: ;">
+					<div id="guardians" class="marvelTeam">
 						<img id="imgGuardians" src="">
-						<h3 id="nameGuardians"></h3>
+						<h2 id="nameGuardians"></h2>
 					</div>
 				</a>
 			</div>
 
 		</div>
 
-		<div id="description" style="text-align: center; border-style: solid;">
-			<div id="divAleatorio" style="background: purple; color: white; padding: 30px; display: block;">
-				<h3>Text</h3>
-				<p>Isto é o que vai aparecer no Início pra todos verem</p>
-				<div class="row">
-					<div class="col-md-4" style="background: gold;">.</div>
-					<div class="col-md-4" style="background: brown;">.</div>
-					<div class="col-md-4" style="background: grey;">.</div>
-				</div>
+		<!-- Marvel's Heroes -->
+		<br><br>
+		<div id="description" style="text-align: center;">
+			<div id="divAleatorio" style="padding: 30px; display: block;">
+				<h2>SPA</h2>
+				<p>Marvel Comics is considered the largest comic book publisher in the world. Since the late 1930s, Marvel has enchanted people with its stories.</p>
+				<p>The Marvel Comics API allows developers anywhere to access information about a vast library of Marvel comics - from what's to come until 70 years ago.</p>
+				<p>This SPA shows the selection of three Marvel Hero Teams (X-Men, Avengers and Guardians of the Galaxy). By clicking on each of the images referring to each of these teams, the description of the Team, the listing of one of the heroes and a button (non-functional) to show other heroes is shown.</p> 
+				
 			</div>
 
-			<div id="divXMEN" style="background: gold;  padding: 30px; display: none;">
-				<h3>Text</h3>
-				<p>This is the description of X-Men's Team</p>
-				<p id="descriptionXMEN" style="border-style: solid;"></p>
-				
+			<!-- X-Men's Heroes -->
+			<div id="divXMEN" style="padding: 30px; display: none;">
+				<h2>X-MEN</h2>
+				<h3>This is the description of X-Men's Team</h3>
+				<p id="descriptionXMEN" style=""></p>
+				<br><br> 				
 				<div class="row">
-					<div class="col-md-4" style="background: red;">
+					<div class="col-md-4">
 						<div id="Wolverine" class="personagem" >
 							<img id="imgWolverine" src="">
 							<h3 id="nameWolverine"></h3>
-							<p id="descriptionWolverine" style="border-style: ;"></p>
+							<!-- <p id="descriptionWolverine" style="border-style: ;"></p> -->
 						</div>
 					</div>
 
-					<div class="col-md-4" style="background: brown;">
+					<div class="col-md-4">
 						<div id="Rogue" class="personagem">
 							<img id="imgRogue" src="">
 							<h3 id="nameRogue"></h3>
@@ -139,7 +109,7 @@
 						</div>
 					</div>
 
-					<div class="col-md-4" style="background: grey;">
+					<div class="col-md-4">
 						<div id="Cyclops" class="personagem" style="background: ;">
 							<img id="imgCyclops" src="">
 							<h3 id="nameCyclops"></h3>
@@ -148,48 +118,60 @@
 					</div>
 				</div>	
 
-				<button class="btn btn-outline-danger"> 
+				<br><br> 
+				<button class="btn btn-outline-dark"> 
 					View most Heroes
-				</button>			
+				</button>	
+				<br><br> 		
 			</div>
 			
-			<div id="divAvengers" class="row" style="background: aquamarine;padding: 30px; display: none;">
-				<h3>Text</h3>
-				<p>This is the description of Avenger's Team</p>
-				<p id="descriptionAvengers" style="border-style: solid;"></p>
+			<!-- Avengers' Heroes -->
+			<div id="divAvengers" class="row" style="padding: 30px; display: none;">
+				<h2>AVENGERS</h2>
+				<h3>This is the description of Avenger's Team</h3>
+				<p id="descriptionAvengers" ></p>
 
+				<br><br> 
 				<div class="row">
-					<div class="col-md-4" style="background: gold;">
+					<div class="col-md-4" >
 						<div id="IronMan" class="personagem">
 							<img id="imgIronMan" src="">
 							<h3 id="nameIronMan"></h3>
-							<p id="descriptionIronMan" style="border-style: ;"></p>
+							
 						</div>
 					</div>
-					<div class="col-md-4" style="background: brown;">
+					<div class="col-md-4" >
 						<div id="CapAmerica" class="personagem">
 							<img id="imgCapAmerica" src="">
 							<h3 id="nameCapAmerica"></h3>
-							<p id="descriptionCapAmerica" style="border-style: ;"></p>
+							
 						</div>
 					</div>
 
-					<div class="col-md-4" style="background: grey;">
+					<div class="col-md-4" >
 						<div id="Thor" class="personagem">
 							<img id="imgThor" src="">
 							<h3 id="nameThor"></h3>
-							<p id="descriptionThor" style="border-style: ;"></p>
+							
 						</div>
 					</div>
 				</div>
+
+				<br><br> 
+				<button class="btn btn-outline-dark"> 
+					View most Heroes
+				</button>	 
 			</div>
 
-			<div id="divGuardians" style="background: olive;  padding: 30px; display: none;">
-				<h3>Text</h3>
-				<p>This is the description of Guardian's Team</p>
-				<p id="descriptionGuardians" style="border-style: solid;"></p>
+			<!-- Guardians' Heroes -->
+			<div id="divGuardians" style="padding: 30px; display: none;">
+				<h2>GUARDIANS OF THE GALAXY</h2>
+				<h3>This is the description of Guardian's Team</h3>
+				<p id="descriptionGuardians" style=""></p>
+				
+				<br><br> 
 				<div class="row">
-					<div class="col-md-4" style="background: gold;">
+					<div class="col-md-4" >
 						<div id="Drax" class="personagem">
 							<img id="imgDrax" src="">
 							<h3 id="nameDrax"></h3>
@@ -197,7 +179,7 @@
 						</div>
 					</div>
 
-					<div class="col-md-4" style="background: brown;">
+					<div class="col-md-4" >
 						<div id="Gamora" class="personagem">
 							<img id="imgGamora" src="">
 							<h3 id="nameGamora"></h3>
@@ -205,7 +187,7 @@
 						</div>
 					</div>
 
-					<div class="col-md-4" style="background: grey;">
+					<div class="col-md-4" >
 						<div id="Groot" class="personagem">
 							<img id="imgGroot" src="">
 							<h3 id="nameGroot"></h3>
@@ -213,539 +195,32 @@
 						</div>
 					</div>
 
-				</div>				
+				</div>	
+
+				<br><br> 
+				<button class="btn btn-outline-dark"> 
+					View most Heroes
+				</button>	 			
 			</div>	
 		</div>
 		
 	</div>
 
-	<footer style="background: #151515; color: white; text-align: center; padding-top: 10px; padding-bottom: 10px;">
-		<p>Site Desenvolvido por Anderson Leandro</p>
+	<footer style="background: #151515; color: white; text-align: center; padding-top: 50px; padding-bottom: 50px;">
+		<p>Site Desenvolvido por Anderson Leandro - 31/05/2021</p>
+		<p>Ver Documentação do Projeto no Github
+			<a href="https://github.com/leandromarques1/MarvelSPA" target="_blank" style="color: lightgrey;">
+				<i class="fab fa-github"></i>
+			</a>
+		</p>
 	</footer>
 
 
-	<!-- Renderização de Elementos -->
-	<script type="text/javascript">
+	<!-- Rendering Elements  -->
+	<script src="render.js"></script>
 
-		/*Marvel's Teams*/
-		const XMEN = {
-			render: () => { 
-				const urlXMEN = 'https://gateway.marvel.com:443/v1/public/characters?name=X-Men&ts=1622418622&apikey=422749bb52e2f36fa725581966133fe0&hash=2898de91e5bd3b57fcf7d8ed209681e5';
+	<!-- JavaScript Functions - SPA -->
+	<script src="javascript.js"></script>
 
-				fetch(urlXMEN)
-					.then((response) => {
-					return response.json();
-				})
-					.then((jsonParsed => {
-					const divXMEN = document.querySelector('#xmen');
-
-					
-					jsonParsed.data.results.forEach(element => {
-						const imagemXMEN = element.thumbnail.path + '.' + element.thumbnail.extension ;
-						const nomeXMEN = element.name;
-						const descricaoXMEN = element.description;
-
-						let imgDiv = document.getElementById('imgXMEN')
-						imgDiv.src = imagemXMEN;
-
-						let nameDiv = document.getElementById('nameXMEN')
-						nameDiv.textContent = nomeXMEN;
-
-						let descriptionDiv = document.getElementById('descriptionXMEN')
-						descriptionDiv.textContent = descricaoXMEN;
-						
-						/*createDivXMEN (imagemXMEN, nomeXMEN, divXMEN);*/
-					});
-								
-					console.log(jsonParsed);
-					
-				}))
-
-				/*function createDivXMEN(imgDiv, nameDiv, divToAppend)
-				{
-					const divPai = document.createElement('div');
-					const divFilho = document.createElement('div');
-					const textName = document.createElement('text');
-					const imagem = document.createElement('img');
-
-					const par = document.getElementById('paragrafo');
-					par.innerHTML = '<h1>Eita!</h1>';
-
-					textName.textContent = nameDiv;
-					imagem.src = imgDiv;
-
-					divFilho.appendChild(imagem);
-					divFilho.appendChild(textName);
-					divPai.appendChild(divFilho);
-					divToAppend.appendChild(divPai);
-
-					divPai.classList.add("personagem");
-				}*/
-			}
-		};
-		XMEN.render();
-
-		const Avengers = {
-			render: () => { 
-				const urlAvengers = 'https://gateway.marvel.com:443/v1/public/characters?name=Avengers&ts=1622418622&apikey=422749bb52e2f36fa725581966133fe0&hash=2898de91e5bd3b57fcf7d8ed209681e5';
-
-				fetch(urlAvengers)
-					.then((response) => {
-					return response.json();
-				})
-					.then((jsonParsed => {
-					const divAvengers = document.querySelector('#avengers');
-
-					
-					jsonParsed.data.results.forEach(element => {
-						const imagemAvengers = element.thumbnail.path + '.' + element.thumbnail.extension ;
-						const nomeAvengers = element.name;
-						const descricaoAvengers = element.description;
-
-						let imgDiv = document.getElementById('imgAvengers')
-						imgDiv.src = imagemAvengers;
-
-						let nameDiv = document.getElementById('nameAvengers')
-						nameDiv.textContent = nomeAvengers;
-
-						let descriptionDiv = document.getElementById('descriptionAvengers')
-						descriptionDiv.textContent = descricaoAvengers;
-
-
-						/*createDivAvengers(imagemAvengers, nomeAvengers, divAvengers);*/
-					});
-								
-					console.log(jsonParsed);
-					
-				}))
-
-				function createDivAvengers(imgDiv, nameDiv, divToAppend)
-				{
-					const divPai = document.createElement('div');
-					const divFilho = document.createElement('div');
-					const textName = document.createElement('text');
-					const imagem = document.createElement('img');
-
-					
-
-					textName.textContent = nameDiv;
-					imagem.src = imgDiv;
-
-					divFilho.appendChild(imagem);
-					divFilho.appendChild(textName);
-					divPai.appendChild(divFilho);
-					divToAppend.appendChild(divPai);
-
-					divPai.classList.add("personagem");
-				}
-			}
-		};
-		Avengers.render();
-		
-		const Guardians = {
-			render: () => { 
-				const urlGuardians = 'https://gateway.marvel.com:443/v1/public/characters?name=Guardians%20of%20the%20Galaxy&ts=1622418622&apikey=422749bb52e2f36fa725581966133fe0&hash=2898de91e5bd3b57fcf7d8ed209681e5';
-
-				fetch(urlGuardians)
-					.then((response) => {
-					return response.json();
-				})
-					.then((jsonParsed => {
-					const divGuardians = document.querySelector('#guardians');
-
-					
-					jsonParsed.data.results.forEach(element => {
-						const imagemGuardians = element.thumbnail.path + '.' + element.thumbnail.extension ;
-						const nomeGuardians = element.name;
-						const descricaoGuardians = element.description;
-
-						let imgDiv = document.getElementById('imgGuardians')
-						imgDiv.src = imagemGuardians;
-
-						let nameDiv = document.getElementById('nameGuardians')
-						nameDiv.textContent = nomeGuardians;
-
-						let descriptionDiv = document.getElementById('descriptionGuardians')
-						descriptionDiv.textContent = descricaoGuardians;
-
-
-						/*createDivEternals(imagemEternals, nomeEternals, divEternals);*/
-					});
-								
-					console.log(jsonParsed);
-					
-				}))
-
-				/*function createDivEternals(imgDiv, nameDiv, divToAppend)
-				{
-					const divPai = document.createElement('div');
-					const divFilho = document.createElement('div');
-					const textName = document.createElement('text');
-					const imagem = document.createElement('img');
-
-					
-
-					textName.textContent = nameDiv;
-					imagem.src = imgDiv;
-
-					divFilho.appendChild(imagem);
-					divFilho.appendChild(textName);
-					divPai.appendChild(divFilho);
-					divToAppend.appendChild(divPai);
-
-					divPai.classList.add("personagem");
-				}*/
-			}
-		};
-		Guardians.render();
-
-		/*========================*/
-		/*Avenger's Heroes*/
-		const IronMan = {
-			render: () => { 
-				const urlIronMan = 'https://gateway.marvel.com:443/v1/public/characters?name=Iron%20Man&ts=1622418622&apikey=422749bb52e2f36fa725581966133fe0&hash=2898de91e5bd3b57fcf7d8ed209681e5';
-
-				fetch(urlIronMan)
-					.then((response) => {
-					return response.json();
-				})
-					.then((jsonParsed => {
-					const divIronMan = document.querySelector('#IronMan');
-
-					
-					jsonParsed.data.results.forEach(element => {
-						const imagemIronMan = element.thumbnail.path + '.' + element.thumbnail.extension ;
-						const nomeIronMan = element.name;
-						const descricaoIronMan = element.description;
-
-						let imgDiv = document.getElementById('imgIronMan')
-						imgDiv.src = imagemIronMan;
-
-						let nameDiv = document.getElementById('nameIronMan')
-						nameDiv.textContent = nomeIronMan;
-
-						let descriptionDiv = document.getElementById('descriptionIronMan')
-						descriptionDiv.textContent = descricaoIronMan; 
-					});
-					console.log(jsonParsed);
-				})) 
-			}
-		};
-		IronMan.render();
-
-		const CapAmerica = {
-			render: () => { 
-				const urlCapAmerica = 'https://gateway.marvel.com:443/v1/public/characters?name=Captain%20America&ts=1622418622&apikey=422749bb52e2f36fa725581966133fe0&hash=2898de91e5bd3b57fcf7d8ed209681e5';
-
-				fetch(urlCapAmerica)
-					.then((response) => {
-					return response.json();
-				})
-					.then((jsonParsed => {
-					const divCapAmerica = document.querySelector('#CapAmerica');
-
-					
-					jsonParsed.data.results.forEach(element => {
-						const imagemCapAmerica = element.thumbnail.path + '.' + element.thumbnail.extension ;
-						const nomeCapAmerica = element.name;
-						const descricaoCapAmerica = element.description;
-
-						let imgDiv = document.getElementById('imgCapAmerica')
-						imgDiv.src = imagemCapAmerica;
-
-						let nameDiv = document.getElementById('nameCapAmerica')
-						nameDiv.textContent = nomeCapAmerica;
-
-						let descriptionDiv = document.getElementById('descriptionCapAmerica')
-						descriptionDiv.textContent = descricaoCapAmerica; 
-					});
-					console.log(jsonParsed);
-				})) 
-			}
-		};
-		CapAmerica.render();
-
-		const Thor = {
-			render: () => { 
-				const urlThor = 'https://gateway.marvel.com:443/v1/public/characters?name=Thor&ts=1622418622&apikey=422749bb52e2f36fa725581966133fe0&hash=2898de91e5bd3b57fcf7d8ed209681e5';
-
-				fetch(urlThor)
-					.then((response) => {
-					return response.json();
-				})
-					.then((jsonParsed => {
-					const divThor = document.querySelector('#Thor');
-
-					
-					jsonParsed.data.results.forEach(element => {
-						const imagemThor = element.thumbnail.path + '.' + element.thumbnail.extension ;
-						const nomeThor = element.name;
-						const descricaoThor = element.description;
-
-						let imgDiv = document.getElementById('imgThor')
-						imgDiv.src = imagemThor;
-
-						let nameDiv = document.getElementById('nameThor')
-						nameDiv.textContent = nomeThor;
-
-						let descriptionDiv = document.getElementById('descriptionThor')
-						descriptionDiv.textContent = descricaoThor; 
-					});
-					console.log(jsonParsed);
-				})) 
-			}
-		};
-		Thor.render();	
-
-		/*========================*/
-		/*X-Men's Heroes*/
-		const Wolverine = {
-			render: () => { 
-				const urlWolverine = 'https://gateway.marvel.com:443/v1/public/characters?name=Wolverine&ts=1622418622&apikey=422749bb52e2f36fa725581966133fe0&hash=2898de91e5bd3b57fcf7d8ed209681e5';
-
-				fetch(urlWolverine)
-					.then((response) => {
-					return response.json();
-				})
-					.then((jsonParsed => {
-					const divWolverine = document.querySelector('#Wolverine');
-
-					
-					jsonParsed.data.results.forEach(element => {
-						const imagemWolverine = element.thumbnail.path + '.' + element.thumbnail.extension ;
-						const nomeWolverine = element.name;
-						const descricaoWolverine = element.description;
-
-						let imgDiv = document.getElementById('imgWolverine')
-						imgDiv.src = imagemWolverine;
-
-						let nameDiv = document.getElementById('nameWolverine')
-						nameDiv.textContent = nomeWolverine;
-
-						let descriptionDiv = document.getElementById('descriptionWolverine')
-						descriptionDiv.textContent = descricaoWolverine; 
-					});
-					console.log(jsonParsed);
-				})) 
-			}
-		};
-		Wolverine.render();
-
-		const Rogue = {
-			render: () => { 
-				const urlRogue = 'https://gateway.marvel.com:443/v1/public/characters?name=Rogue&ts=1622418622&apikey=422749bb52e2f36fa725581966133fe0&hash=2898de91e5bd3b57fcf7d8ed209681e5';
-
-				fetch(urlRogue)
-					.then((response) => {
-					return response.json();
-				})
-					.then((jsonParsed => {
-					const divRogue = document.querySelector('#JeanGrey');
-
-					
-					jsonParsed.data.results.forEach(element => {
-						const imagemRogue = element.thumbnail.path + '.' + element.thumbnail.extension ;
-						const nomeRogue = element.name;
-						const descricaoRogue = element.description;
-
-						let imgDiv = document.getElementById('imgRogue')
-						imgDiv.src = imagemRogue;
-
-						let nameDiv = document.getElementById('nameRogue')
-						nameDiv.textContent = nomeRogue;
-
-						let descriptionDiv = document.getElementById('descriptionRogue')
-						descriptionDiv.textContent = descricaoRogue; 
-					});
-					console.log(jsonParsed);
-				})) 
-			}
-		};
-		Rogue.render();
-
-		const Cyclops = {
-			render: () => { 
-				const urlCyclops = 'https://gateway.marvel.com:443/v1/public/characters?name=Cyclops&ts=1622418622&apikey=422749bb52e2f36fa725581966133fe0&hash=2898de91e5bd3b57fcf7d8ed209681e5';
-
-				fetch(urlCyclops)
-					.then((response) => {
-					return response.json();
-				})
-					.then((jsonParsed => {
-					const divCyclops = document.querySelector('#Cyclops');
-
-					
-					jsonParsed.data.results.forEach(element => {
-						const imagemCyclops = element.thumbnail.path + '.' + element.thumbnail.extension ;
-						const nomeCyclops = element.name;
-						const descricaoCyclops = element.description;
-
-						let imgDiv = document.getElementById('imgCyclops')
-						imgDiv.src = imagemCyclops;
-
-						let nameDiv = document.getElementById('nameCyclops')
-						nameDiv.textContent = nomeCyclops;
-
-						let descriptionDiv = document.getElementById('descriptionCyclops')
-						descriptionDiv.textContent = descricaoCyclops; 
-					});
-					console.log(jsonParsed);
-				})) 
-			}
-		};
-		Cyclops.render();
-
-		/*========================*/
-		/*Guardians's Heroes*/
-		const Drax = {
-			render: () => { 
-				const urlDrax = 'https://gateway.marvel.com:443/v1/public/characters?name=Drax&ts=1622418622&apikey=422749bb52e2f36fa725581966133fe0&hash=2898de91e5bd3b57fcf7d8ed209681e5';
-
-				fetch(urlDrax)
-					.then((response) => {
-					return response.json();
-				})
-					.then((jsonParsed => {
-					const divDrax = document.querySelector('#Drax');
-
-					
-					jsonParsed.data.results.forEach(element => {
-						const imagemDrax = element.thumbnail.path + '.' + element.thumbnail.extension ;
-						const nomeDrax = element.name;
-						const descricaoDrax = element.description;
-
-						let imgDiv = document.getElementById('imgDrax')
-						imgDiv.src = imagemDrax;
-
-						let nameDiv = document.getElementById('nameDrax')
-						nameDiv.textContent = nomeDrax;
-
-						let descriptionDiv = document.getElementById('descriptionDrax')
-						descriptionDiv.textContent = descricaoDrax; 
-					});
-					console.log(jsonParsed);
-				})) 
-			}
-		};
-		Drax.render();
-
-		const Gamora = {
-			render: () => { 
-				const urlGamora = 'https://gateway.marvel.com:443/v1/public/characters?name=Gamora&ts=1622418622&apikey=422749bb52e2f36fa725581966133fe0&hash=2898de91e5bd3b57fcf7d8ed209681e5';
-
-				fetch(urlGamora)
-					.then((response) => {
-					return response.json();
-				})
-					.then((jsonParsed => {
-					const divGamora = document.querySelector('#Gamora');
-
-					
-					jsonParsed.data.results.forEach(element => {
-						const imagemGamora = element.thumbnail.path + '.' + element.thumbnail.extension ;
-						const nomeGamora = element.name;
-						const descricaoGamora = element.description;
-
-						let imgDiv = document.getElementById('imgGamora')
-						imgDiv.src = imagemGamora;
-
-						let nameDiv = document.getElementById('nameGamora')
-						nameDiv.textContent = nomeGamora;
-
-						let descriptionDiv = document.getElementById('descriptionGamora')
-						descriptionDiv.textContent = descricaoGamora; 
-					});
-					console.log(jsonParsed);
-				})) 
-			}
-		};
-		Gamora.render();
-
-		const Groot = {
-			render: () => { 
-				const urlGroot = 'https://gateway.marvel.com:443/v1/public/characters?name=Groot&ts=1622418622&apikey=422749bb52e2f36fa725581966133fe0&hash=2898de91e5bd3b57fcf7d8ed209681e5';
-
-				fetch(urlGroot)
-					.then((response) => {
-					return response.json();
-				})
-					.then((jsonParsed => {
-					const divGroot = document.querySelector('#Groot');
-
-					
-					jsonParsed.data.results.forEach(element => {
-						const imagemGroot = element.thumbnail.path + '.' + element.thumbnail.extension ;
-						const nomeGroot = element.name;
-						const descricaoGroot = element.description;
-
-						let imgDiv = document.getElementById('imgGroot')
-						imgDiv.src = imagemGroot;
-
-						let nameDiv = document.getElementById('nameGroot')
-						nameDiv.textContent = nomeGroot;
-
-						let descriptionDiv = document.getElementById('descriptionGroot')
-						descriptionDiv.textContent = descricaoGroot; 
-					});
-					console.log(jsonParsed);
-				})) 
-			}
-		};
-		Groot.render();		
-	</script>
-
-	<!-- Funções JavaScript - SPA -->
-	<script type="text/javascript">
-		function goXMEN (elemento)
-		{	
-			let logoAleatorio = document.getElementById('divAleatorio');
-			let logoXMEN = document.getElementById('divXMEN');
-			let logoAvengers = document.getElementById('divAvengers');
-			let logoGuardians = document.getElementById('divGuardians');
-
-			if (logoXMEN.style.display === 'none')
-			{
-				logoAleatorio.style.display = 'none';
-				logoXMEN.style.display = 'block';
-				logoAvengers.style.display = 'none';
-				logoGuardians.style.display = 'none';
-			}
-			
-		}
-
-		function goAvengers (elemento)
-		{
-			let logoAleatorio = document.getElementById('divAleatorio');
-			let logoXMEN = document.getElementById('divXMEN');
-			let logoAvengers = document.getElementById('divAvengers');
-			let logoGuardians = document.getElementById('divGuardians');
-
-			if (logoAvengers.style.display === 'none')
-			{
-				logoAleatorio.style.display = 'none';
-				logoXMEN.style.display = 'none';
-				logoAvengers.style.display = 'block';
-				logoGuardians.style.display = 'none';
-			}
-			
-		}
-
-		function goGuardians (elemento)
-		{
-			let logoAleatorio = document.getElementById('divAleatorio');
-			let logoXMEN = document.getElementById('divXMEN');
-			let logoAvengers = document.getElementById('divAvengers');
-			let logoGuardians = document.getElementById('divGuardians');
-
-			if (logoGuardians.style.display === 'none')
-			{
-				logoAleatorio.style.display = 'none';
-				logoXMEN.style.display = 'none';
-				logoAvengers.style.display = 'none';
-				logoGuardians.style.display = 'block';
-			}
-			
-		}
-	</script>
 </body>
 </html>
